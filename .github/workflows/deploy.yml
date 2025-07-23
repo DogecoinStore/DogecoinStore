@@ -13,8 +13,8 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp.dogecoin.store  # Edit: Your GoDaddy FTP host (check cPanel > FTP Accounts or General Information for the hostname, e.g., ftp.secureserver.net if not ftp.dogecoin.store)
-          username: wkr9wm8y3tqp  # Edit: Your GoDaddy FTP username (from cPanel > FTP Accounts; use dogeai@dogecoin.store if you created that)
+          server: ftp.secureserver.net  # Edit: Your GoDaddy FTP host (check cPanel > FTP Accounts or General Information for the hostname, e.g., ftp.secureserver.net if not ftp.dogecoin.store)
+          username: dogeai@dogecoin.store  # Edit: Your GoDaddy FTP username (from cPanel > FTP Accounts; use dogeai@dogecoin.store if you created that)
           password: ${{ secrets.FTP_PASSWORD }}  # Don't edit; we'll add this secret in Step 4
           local-dir: ./
           server-dir: /home/wkr9wm8y3tqp/public_html/dogeai/  # Edit: Your GoDaddy path (e.g., /home/your_username/public_html/taxi if for taxi module)
