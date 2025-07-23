@@ -1,0 +1,21 @@
+name: Deploy to GoDaddy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ftp.dogecoin.store
+          username: wkr9wm8y3tqp
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /home/wkr9wm8y3tqp/public_html/ai-coder/
+          exclude: .git*
