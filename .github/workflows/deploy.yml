@@ -17,5 +17,5 @@ jobs:
           username: wkr9wm8y3tqp
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /home/wkr9wm8y3tqp/public_html/ai-coder/
+          server-dir: /home/wkr9wm8y3tqp/public_html/taxi/
           exclude: .git*
